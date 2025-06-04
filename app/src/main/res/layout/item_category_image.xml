@@ -1,0 +1,14 @@
+<!-- res/layout/item_category_image.xml -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/card_background"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/image_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+</FrameLayout>

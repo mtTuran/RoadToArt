@@ -47,15 +47,15 @@
             android:clickable="false"
             android:backgroundTint="@color/white"
             android:textColor="@color/red_primary"
-            android:text="2 / 3"
+            android:text="2 / 3 ❤"
             android:padding="0dp"
             android:textSize="16sp"/>
 
     </RelativeLayout>
 
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:id="@+id/main_frame"
         android:background="@color/secondary_blue"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
@@ -67,6 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:dividerThickness="2dp"
+        app:dividerColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

@@ -1,0 +1,14 @@
+<!-- res/drawable/level_circle.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="@android:color/white" />
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/primary_blue" /> <!-- Optional dark outline -->
+
+    <size
+        android:width="40dp"
+        android:height="40dp" />
+</shape>
