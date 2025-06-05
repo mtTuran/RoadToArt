@@ -6,4 +6,5 @@
     <color name="secondary_blue">#23264B</color>
     <color name="red_primary">#D91D4C</color>
     <color name="purple_primary">#442269</color>
+    <color name="ic_launcher_background">#0000ffff</color> // transparent background color
 </resources>
