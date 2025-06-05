@@ -1,66 +1,69 @@
 package com.example.roadtoart.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.example.roadtoart.MainActivity;
 import com.example.roadtoart.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CurrentHuntFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class CurrentHuntFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    public static int red_order = 0;
     public CurrentHuntFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CurrentHuntFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CurrentHuntFragment newInstance(String param1, String param2) {
-        CurrentHuntFragment fragment = new CurrentHuntFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+        // Required empty constructor
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_current_hunt, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Listeye eklemek istediğiniz tüm item ID'lerini burada belirtin
+        int[] locationItemIds = {
+                R.id.location_1_item,
+                R.id.location_2_item,
+                R.id.location_3_item,
+                R.id.location_4_item,
+                R.id.location_5_item,
+                R.id.location_6_item
+        };
+
+        view.findViewById(R.id.current_hunt_finish_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getActivity() instanceof MainActivity) {
+                    MainActivity mainActivity = (MainActivity) getActivity();
+                    mainActivity.loadFragment(new CongratsFragment(), true);
+                }
+            }
+        });
+
+        for (int id : locationItemIds) {
+            View item = view.findViewById(id);
+            if (item != null) {
+                item.setOnClickListener(v -> {
+                    if (getActivity() instanceof MainActivity) {
+                        MainActivity mainActivity = (MainActivity) getActivity();
+                        mainActivity.loadFragment(new HuntLocationDetailFragment(), true);
+                    }
+                });
+            }
+        }
+        for (int i = 0; i < red_order; i = i + 1){
+            view.findViewById(locationItemIds[red_order]).setBackgroundColor(getResources().getColor(R.color.red_primary));
+        }
+        red_order += 1;
     }
 }

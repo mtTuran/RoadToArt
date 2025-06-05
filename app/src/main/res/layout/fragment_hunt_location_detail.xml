@@ -158,6 +158,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/hunt_detail_submit_button"
             android:layout_alignParentEnd="true"
             android:backgroundTint="@color/primary_blue"
             android:textColor="@color/red_primary"

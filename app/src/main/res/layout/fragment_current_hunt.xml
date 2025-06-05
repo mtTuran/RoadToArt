@@ -87,6 +87,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/location_1_item"
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginVertical="16dp"
                     android:background="@color/red_primary"
@@ -128,6 +129,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/location_2_item"
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginVertical="16dp"
                     android:background="@color/secondary_blue"
@@ -168,6 +170,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/location_3_item"
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginVertical="16dp"
                     android:background="@color/secondary_blue"
@@ -208,6 +211,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/location_4_item"
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginVertical="16dp"
                     android:background="@color/secondary_blue"
@@ -248,6 +252,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/location_5_item"
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginVertical="16dp"
                     android:background="@color/secondary_blue"
@@ -288,6 +293,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/location_6_item"
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginVertical="16dp"
                     android:background="@color/secondary_blue"
@@ -337,10 +343,11 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/current_hunt_finish_button"
                 android:layout_alignParentEnd="true"
                 android:backgroundTint="@color/primary_blue"
                 android:textColor="@color/red_primary"
-                android:text="Submit"/>
+                android:text="Finish"/>
         </RelativeLayout>
     </LinearLayout>
 

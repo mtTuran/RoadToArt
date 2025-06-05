@@ -18,12 +18,12 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.roadtoart.fragments.AddToCollectionFragment;
 import com.example.roadtoart.fragments.CollectionFragment;
 import com.example.roadtoart.fragments.CreateHuntFragment;
-import com.example.roadtoart.fragments.CreateOptionsBottomSheet;
+
 import com.example.roadtoart.fragments.CurrentHuntFragment;
 import com.example.roadtoart.fragments.HomeFragment;
 import com.example.roadtoart.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
+
 
 public class MainActivity extends AppCompatActivity {
     String username;
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean onNavigationItemSelected(MenuItem item) {
         Fragment selectedFragment;
+        currentHuntFragment.red_order = 0;
         int itemId = item.getItemId();
 
         if (itemId == R.id.home) {
@@ -120,5 +121,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         transaction.commit();
+    }
+
+    public BottomNavigationView getBottomNavigationView() {
+        return findViewById(R.id.bottom_navigation);
     }
 }

@@ -30,7 +30,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom=""
                 android:textColor="@color/red_primary"
                 android:text="+45 xp"
                 android:layout_marginTop="40sp"/>
@@ -103,6 +102,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/congrats_finish_button"
             android:layout_alignParentEnd="true"
             android:backgroundTint="@color/primary_blue"
             android:textColor="@color/red_primary"
